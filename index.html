@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Score Keeper</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link
+      rel="icon"
+      href="https://img.freepik.com/free-vector/abstract-badminton-logo_17005-994.jpg?w=740&t=st=1677903444~exp=1677904044~hmac=046b3174641a7c8969c73e84a288d1d5d3e9572a404b1c530182dd6caa975de5"
+    />
+  </head>
+  <style>
+    html {
+      background-image: url("https://images.unsplash.com/photo-1612677257608-90309859bbec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      margin: auto;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="column is-half is-offset-one-quarter">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Badminton Score Keeper</p>
+            <button class="card-header-icon" aria-label="more options">
+              <span class="icon">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </header>
+          <div class="card-image">
+            <figure class="image is-2by1">
+              <img
+                src="https://images.unsplash.com/photo-1521537634581-0dced2fee2ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                alt="Badminton"
+              />
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content is-size-4">
+              Badminton Score Using Vanilla Javascript and Bulma
+            </div>
+            <label for="play" class="label is-large is-inline"
+              >Play Until</label
+            >
+            <div class="select is-primary">
+              <select id="play">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <h1 class="is-size-4 has-text-weight-semibold">
+              <span id="player1Score">0</span>
+              <span>To</span>
+              <span id="player2Score">0</span>
+            </h1>
+          </div>
+          <footer class="card-footer">
+            <button id="p1Button" class="button card-footer-item is-info">
+              Add point to Player 1
+            </button>
+            <button id="p2Button" class="button card-footer-item is-success">
+              Add point to Player 2
+            </button>
+            <button id="p3Button" class="button card-footer-item is-warning">
+              Reset
+            </button>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
